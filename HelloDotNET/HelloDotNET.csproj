@@ -46,13 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HinhChuNhat.cs" />
-    <Compile Include="HinhTron.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BLL\BizHinhTron.cs" />
+    <Compile Include="Model\HinhChuNhat.cs" />
+    <Compile Include="Model\HinhTron.cs" />
+    <Compile Include="UI\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

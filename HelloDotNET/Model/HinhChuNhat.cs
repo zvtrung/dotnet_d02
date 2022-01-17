@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloDotNET
+namespace HelloDotNET.Model
 {
     /// <summary>
     /// Cách thứ hai để định nghĩa thuộc tính trong C#

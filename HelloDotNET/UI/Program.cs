@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloDotNET
+using HelloDotNET.Model;
+using HelloDotNET.BLL;
+
+namespace HelloDotNET.UI
 {
     class Program
     {
-        static void Main(string[] args)
+        static void test()
         {
-
             // Ví dụ getter/setter cổ điển
             HinhTron x;
             x = new HinhTron();
@@ -38,7 +40,27 @@ namespace HelloDotNET
 
             Console.WriteLine("Diện tích = " + hcn.DienTich);
             //hcn.DienTich = 1000;
+        }
 
+        static void testBizHinhTron()
+        {
+            BizHinhTron bizHinhTron = new BizHinhTron("path/to/hinhtron.txt");
+            List<HinhTron> lst = bizHinhTron.ReadAll();
+            //foreach(HinhTron x in lst)
+            //{
+
+            //}
+            for (int i = 0; i < lst.Count; i++)
+            {
+                HinhTron x = lst[i];
+                Console.WriteLine($"Hinh tron thu {i} -- Ban kinh = {x.getBanKinh()}");
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            //test();           
+            testBizHinhTron();
         }
     }
 }
