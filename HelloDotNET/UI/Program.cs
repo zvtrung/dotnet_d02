@@ -44,7 +44,8 @@ namespace HelloDotNET.UI
 
         static void testBizHinhTron()
         {
-            BizHinhTron bizHinhTron = new BizHinhTron("path/to/hinhtron.txt");
+            //BizHinhTron bizHinhTron = new BizHinhTron("D:\\T2MProjects\\dnet-workspace\\Day02\\HelloDotNET\\bin\\Debug\\hinhtron.txt");
+            BizHinhTron bizHinhTron = new BizHinhTron("D:/T2MProjects/dnet-workspace/Day02/HelloDotNET/bin/Debug/hinhtron.txt");
             List<HinhTron> lst = bizHinhTron.ReadAll();
             //foreach(HinhTron x in lst)
             //{
