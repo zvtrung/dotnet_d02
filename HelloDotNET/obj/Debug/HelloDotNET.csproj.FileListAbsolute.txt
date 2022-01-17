@@ -1,0 +1,7 @@
+D:\T2MProjects\dnet-workspace\Day02\HelloDotNET\bin\Debug\HelloDotNET.exe.config
+D:\T2MProjects\dnet-workspace\Day02\HelloDotNET\bin\Debug\HelloDotNET.exe
+D:\T2MProjects\dnet-workspace\Day02\HelloDotNET\bin\Debug\HelloDotNET.pdb
+D:\T2MProjects\dnet-workspace\Day02\HelloDotNET\obj\Debug\HelloDotNET.csproj.AssemblyReference.cache
+D:\T2MProjects\dnet-workspace\Day02\HelloDotNET\obj\Debug\HelloDotNET.csproj.CoreCompileInputs.cache
+D:\T2MProjects\dnet-workspace\Day02\HelloDotNET\obj\Debug\HelloDotNET.exe
+D:\T2MProjects\dnet-workspace\Day02\HelloDotNET\obj\Debug\HelloDotNET.pdb
