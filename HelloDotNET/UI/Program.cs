@@ -51,6 +51,18 @@ namespace HelloDotNET.UI
             //{
 
             //}
+
+            Console.WriteLine("Danh sách toàn bộ hình tròn");
+            for (int i = 0; i < lst.Count; i++)
+            {
+                HinhTron x = lst[i];
+                Console.WriteLine($"Hinh tron thu {i} -- Ban kinh = {x.getBanKinh()}");
+            }
+
+            float bkMin = 2.0f;
+            float bkMax = 60.0f;
+            lst = bizHinhTron.ReadWithCondition(bkMin, bkMax);
+            Console.WriteLine($"Danh sách các hình tròn có bk nằm trong [{bkMin}, {bkMax}]");
             for (int i = 0; i < lst.Count; i++)
             {
                 HinhTron x = lst[i];
