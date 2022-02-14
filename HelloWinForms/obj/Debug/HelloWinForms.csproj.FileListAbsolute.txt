@@ -1,0 +1,9 @@
+D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\bin\Debug\HelloWinForms.exe.config
+D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\bin\Debug\HelloWinForms.exe
+D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\bin\Debug\HelloWinForms.pdb
+D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.FormMain.resources
+D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.Properties.Resources.resources
+D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.csproj.GenerateResource.cache
+D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.csproj.CoreCompileInputs.cache
+D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.exe
+D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.pdb
