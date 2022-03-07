@@ -7,3 +7,4 @@ D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.csproj
 D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.csproj.CoreCompileInputs.cache
 D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.exe
 D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.pdb
+D:\T2MProjects\dnet-workspace\Day02\HelloWinForms\obj\Debug\HelloWinForms.csproj.AssemblyReference.cache

@@ -1,0 +1,10 @@
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\bin\Debug\QuanLySach.exe.config
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\bin\Debug\QuanLySach.exe
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\bin\Debug\QuanLySach.pdb
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.csproj.AssemblyReference.cache
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.FormSach.resources
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.Properties.Resources.resources
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.csproj.GenerateResource.cache
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.csproj.CoreCompileInputs.cache
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.exe
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.pdb

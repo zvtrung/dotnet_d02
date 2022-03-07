@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViDuVeTryCatch", "ViDuVeTry
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWinForms", "HelloWinForms\HelloWinForms.csproj", "{70108FF1-952B-4E62-ADD0-402D720A07D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLySach", "QuanLySach\QuanLySach.csproj", "{C4AA4BF3-FECE-48D6-9E06-AE7C9D275F79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{70108FF1-952B-4E62-ADD0-402D720A07D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70108FF1-952B-4E62-ADD0-402D720A07D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70108FF1-952B-4E62-ADD0-402D720A07D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4AA4BF3-FECE-48D6-9E06-AE7C9D275F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4AA4BF3-FECE-48D6-9E06-AE7C9D275F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4AA4BF3-FECE-48D6-9E06-AE7C9D275F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4AA4BF3-FECE-48D6-9E06-AE7C9D275F79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
