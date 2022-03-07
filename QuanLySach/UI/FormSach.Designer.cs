@@ -55,7 +55,7 @@ namespace QuanLySach
             this.btnSach_Xoa});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(619, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(705, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -84,6 +84,7 @@ namespace QuanLySach
             this.btnSach_Sua.Name = "btnSach_Sua";
             this.btnSach_Sua.Size = new System.Drawing.Size(80, 22);
             this.btnSach_Sua.Text = "Chỉnh sửa";
+            this.btnSach_Sua.Click += new System.EventHandler(this.btnSach_Sua_Click);
             // 
             // btnSach_Xoa
             // 
@@ -100,7 +101,7 @@ namespace QuanLySach
             this.lblThongKe});
             this.statusStrip1.Location = new System.Drawing.Point(0, 289);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(619, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(705, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -113,6 +114,7 @@ namespace QuanLySach
             // 
             // gridSach
             // 
+            this.gridSach.BackgroundColor = System.Drawing.Color.White;
             this.gridSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaSach,
@@ -121,33 +123,36 @@ namespace QuanLySach
             this.gridSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSach.Location = new System.Drawing.Point(0, 25);
             this.gridSach.Name = "gridSach";
-            this.gridSach.Size = new System.Drawing.Size(619, 264);
+            this.gridSach.Size = new System.Drawing.Size(705, 264);
             this.gridSach.TabIndex = 2;
             // 
             // colMaSach
             // 
+            this.colMaSach.DataPropertyName = "MaSach";
             this.colMaSach.HeaderText = "Mã sách";
             this.colMaSach.Name = "colMaSach";
             // 
             // colTieuDe
             // 
+            this.colTieuDe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colTieuDe.HeaderText = "Tiêu đề";
             this.colTieuDe.MinimumWidth = 150;
             this.colTieuDe.Name = "colTieuDe";
-            this.colTieuDe.Width = 200;
             // 
             // colTacGia
             // 
+            this.colTacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colTacGia.DataPropertyName = "DanhSachTacGia222";
             this.colTacGia.HeaderText = "Tác giả";
             this.colTacGia.MinimumWidth = 120;
             this.colTacGia.Name = "colTacGia";
-            this.colTacGia.Width = 150;
+            this.colTacGia.Width = 120;
             // 
             // FormSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 311);
+            this.ClientSize = new System.Drawing.Size(705, 311);
             this.Controls.Add(this.gridSach);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);

@@ -14,9 +14,24 @@ namespace QuanLySach.UI
 {
     public partial class FormSachNew : Form
     {
+        /// <summary>
+        /// Thực thế sách vừa mới chèn thành công
+        /// </summary>
+        /// <value>
+        /// The inserted sach.
+        /// </value>
+        public Sach InsertedSach { get; private set; }
+
         public FormSachNew()
         {
             InitializeComponent();
+
+            // Nạp danh sách các nhà xuất bản vào cbxNhaXuatBan để người dùng có thể chọn
+            BizNhaXuatBan bizNXB = new BizNhaXuatBan();
+
+            List<NhaXuatBan> lst = bizNXB.GetAll();
+            cbxNhaXuatBan.DataSource = lst;
+            cbxNhaXuatBan.DisplayMember = "TenNhaXuatBan";
         }
 
         private void btnDongY_Click(object sender, EventArgs e)
@@ -25,7 +40,9 @@ namespace QuanLySach.UI
             int maSach = int.Parse(txtMaSach.Text);
             string tieuDe = txtTieuDe.Text;
             string danhSachTacGia = txtDanhSachTacGia.Text;
-            int maNhaXuatBan = -1; // TODO
+
+            NhaXuatBan selectedNXB = (NhaXuatBan)cbxNhaXuatBan.SelectedItem;
+            int maNhaXuatBan = selectedNXB.MaNhaXuatBan;
             int namXuatBan = int.Parse(txtNamXuatBan.Text);
 
             // 2. Thành lập đối tượng sach
@@ -39,6 +56,17 @@ namespace QuanLySach.UI
             // 3. Thực hiện lưu lên csdl
             BizSach bizSach = new BizSach();
             bizSach.Insert(x);
+
+            this.InsertedSach = x;
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void btnBoQua_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

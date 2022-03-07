@@ -18,7 +18,37 @@ namespace QuanLySach.BLL
         /// <returns></returns>
         internal List<Sach> ReadAll()
         {
-            throw new NotImplementedException();
+            List<Sach> lst = new List<Sach>();
+
+            Sach x = new Sach();
+            x.MaSach = 1;
+            x.TieuDe = "Lập trình C cơ bản";
+            x.DanhSachTacGia = "Trương Công Tuấn, Đoàn Thị Hồng Phước";
+            x.MaNhaXuatBan = 1;
+            x.NamXuatBan = 2000;
+
+            lst.Add(x);
+
+            x = new Sach()
+            {
+                MaSach = 2,
+                TieuDe = "Lập trình Java nâng cao",
+                DanhSachTacGia = "Nguyễn Hoàng Hà, Nguyễn Văn Trung",
+                MaNhaXuatBan = 1,
+                NamXuatBan = 2002
+            };
+            lst.Add(x);
+
+            lst.Add(new Sach()
+            {
+                MaSach = 3,
+                TieuDe = "How to programming XYZ",
+                DanhSachTacGia = "Trần Nguyên Phong",
+                MaNhaXuatBan = 2,
+                NamXuatBan = 2022
+            });
+
+            return lst;
         }
 
         /// <summary>
@@ -26,9 +56,10 @@ namespace QuanLySach.BLL
         /// </summary>
         /// <param name="sach">The sach.</param>
         /// <exception cref="System.NotImplementedException"></exception>
-        internal void Xoa(Sach sach)
+        internal bool Xoa(Sach sach)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return true;
         }
 
         /// <summary>
@@ -38,7 +69,7 @@ namespace QuanLySach.BLL
         /// <exception cref="System.NotImplementedException"></exception>
         internal void Insert(Sach x)
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
     }
 }

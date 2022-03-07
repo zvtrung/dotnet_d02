@@ -1,5 +1,6 @@
 ﻿using QuanLySach.BLL;
 using QuanLySach.Model;
+using QuanLySach.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,24 +31,62 @@ namespace QuanLySach
             BizSach bizSach = new BizSach();
 
             List<Sach> lst = bizSach.ReadAll();
+
+            // Hiển thị lên GUI / grid
+            colMaSach.DataPropertyName = "MaSach";
+            colTacGia.DataPropertyName = "DanhSachTacGia";
+            colTieuDe.DataPropertyName = "TieuDe";
+
+            gridSach.AutoGenerateColumns = false;
+            gridSach.DataSource = lst;
         }
 
         private void btnSach_ThemMoi_Click(object sender, EventArgs e)
         {
             // Mở form FormSachNew
+            FormSachNew frm = new FormSachNew();
+            
+            if (frm.ShowDialog(this) == DialogResult.OK)
+            {
+                // Nếu chèn thành công thì nạp lại danh sách
+                Sach x = frm.InsertedSach;
 
-            // Nếu chèn thành công thì nạp lại danh sách
+                // thêm vào grid
+                List<Sach> lst = (List<Sach>)(gridSach.DataSource);
+                lst.Add(x);
+                gridSach.DataSource = null;
+                gridSach.DataSource = lst;
+            }
+            else
+            {
+                // Do nothing!
+            }
         }
 
         private void btnSach_Xoa_Click(object sender, EventArgs e)
         {
             // Xoá quyển sách đang được chọn trên grid
             // 1. Xác định sach đang được chọn
-            Sach sach = null; // quyển sách đang chọn
+            DataGridViewRow selectedRow = gridSach.CurrentRow;
+            Sach sach = (Sach)selectedRow.DataBoundItem;
 
             // 2. Thực hiện xoá bizSach.Xoa(sach)
             BizSach bizSach = new BizSach();
-            bizSach.Xoa(sach);
+            if (bizSach.Xoa(sach) == true)
+            {
+                // Xoá đối tượng Sach khỏi grid
+
+                // thêm vào grid
+                List<Sach> lst = (List<Sach>)(gridSach.DataSource);
+                lst.Remove(sach);
+                gridSach.DataSource = null;
+                gridSach.DataSource = lst;
+            }
+        }
+
+        private void btnSach_Sua_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

@@ -14,9 +14,19 @@ namespace QuanLySach.BLL
 
         }
 
+        /// <summary>
+        /// Lấy danh sách các NXB.
+        /// </summary>
+        /// <returns></returns>
         public List<NhaXuatBan> GetAll()
         {
-            return null;
+            List<NhaXuatBan> lst = new List<NhaXuatBan>();
+            lst.Add(new NhaXuatBan() { MaNhaXuatBan = 1, TenNhaXuatBan = "Nhà xuất bản Trẻ" });
+            lst.Add(new NhaXuatBan() { MaNhaXuatBan = 2, TenNhaXuatBan = "Nhà xuất bản Lao động" });
+            lst.Add(new NhaXuatBan() { MaNhaXuatBan = 3, TenNhaXuatBan = "Nhà xuất bản Giáo dục" });
+            lst.Add(new NhaXuatBan() { MaNhaXuatBan = 4, TenNhaXuatBan = "Nhà xuất bản Thuận Hoá" });
+
+            return lst;
         }
     }
 }

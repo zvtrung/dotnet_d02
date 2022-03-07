@@ -39,7 +39,7 @@ namespace QuanLySach.UI
             this.cbxNhaXuatBan = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNamXuatBan = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBoQua = new System.Windows.Forms.Button();
             this.btnDongY = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -103,6 +103,7 @@ namespace QuanLySach.UI
             // 
             // cbxNhaXuatBan
             // 
+            this.cbxNhaXuatBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxNhaXuatBan.FormattingEnabled = true;
             this.cbxNhaXuatBan.Location = new System.Drawing.Point(101, 100);
             this.cbxNhaXuatBan.Name = "cbxNhaXuatBan";
@@ -125,14 +126,15 @@ namespace QuanLySach.UI
             this.txtNamXuatBan.Size = new System.Drawing.Size(97, 20);
             this.txtNamXuatBan.TabIndex = 1;
             // 
-            // button1
+            // btnBoQua
             // 
-            this.button1.Location = new System.Drawing.Point(333, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 27);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Bỏ qua";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBoQua.Location = new System.Drawing.Point(333, 180);
+            this.btnBoQua.Name = "btnBoQua";
+            this.btnBoQua.Size = new System.Drawing.Size(83, 27);
+            this.btnBoQua.TabIndex = 3;
+            this.btnBoQua.Text = "Bỏ qua";
+            this.btnBoQua.UseVisualStyleBackColor = true;
+            this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
             // btnDongY
             // 
@@ -160,7 +162,7 @@ namespace QuanLySach.UI
             this.ClientSize = new System.Drawing.Size(428, 219);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnDongY);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBoQua);
             this.Controls.Add(this.cbxNhaXuatBan);
             this.Controls.Add(this.txtNamXuatBan);
             this.Controls.Add(this.label5);
@@ -193,7 +195,7 @@ namespace QuanLySach.UI
         private System.Windows.Forms.ComboBox cbxNhaXuatBan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNamXuatBan;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBoQua;
         private System.Windows.Forms.Button btnDongY;
         private System.Windows.Forms.Button button2;
     }
