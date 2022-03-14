@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLySach.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace QuanLySach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSach());
+            Application.Run(new FormDemo2());
         }
     }
 }

@@ -31,14 +31,19 @@ namespace QuanLySach
             BizSach bizSach = new BizSach();
 
             List<Sach> lst = bizSach.ReadAll();
+            bsSach.DataSource = lst;
+
 
             // Hiển thị lên GUI / grid
             colMaSach.DataPropertyName = "MaSach";
             colTacGia.DataPropertyName = "DanhSachTacGia";
             colTieuDe.DataPropertyName = "TieuDe";
 
+
             gridSach.AutoGenerateColumns = false;
-            gridSach.DataSource = lst;
+            gridSach.DataSource = bsSach;
+
+            grid2.DataSource = bsSach;
         }
 
         private void btnSach_ThemMoi_Click(object sender, EventArgs e)
@@ -98,6 +103,13 @@ namespace QuanLySach
                 // Cập nhật danh sách cho đối tượng vừa sửa xong
                 //gridSach.
             }
+        }
+
+        private void bsSach_CurrentChanged(object sender, EventArgs e)
+        {
+            // hiển thị thông tin về ds tác giả
+            Sach x = (Sach)bsSach.Current;
+            txtTacGia.Text = x.DanhSachTacGia;
         }
     }
 }

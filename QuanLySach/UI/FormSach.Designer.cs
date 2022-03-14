@@ -29,6 +29,7 @@ namespace QuanLySach
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSach));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNapLai = new System.Windows.Forms.ToolStripButton();
@@ -41,9 +42,17 @@ namespace QuanLySach
             this.colMaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTacGia = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bsSach = new System.Windows.Forms.BindingSource(this.components);
+            this.grid2 = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSach)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -123,7 +132,7 @@ namespace QuanLySach
             this.gridSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSach.Location = new System.Drawing.Point(0, 25);
             this.gridSach.Name = "gridSach";
-            this.gridSach.Size = new System.Drawing.Size(705, 264);
+            this.gridSach.Size = new System.Drawing.Size(418, 264);
             this.gridSach.TabIndex = 2;
             // 
             // colMaSach
@@ -148,12 +157,53 @@ namespace QuanLySach
             this.colTacGia.Name = "colTacGia";
             this.colTacGia.Width = 120;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtTacGia);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(418, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(287, 264);
+            this.panel1.TabIndex = 3;
+            // 
+            // txtTacGia
+            // 
+            this.txtTacGia.Location = new System.Drawing.Point(6, 26);
+            this.txtTacGia.Multiline = true;
+            this.txtTacGia.Name = "txtTacGia";
+            this.txtTacGia.Size = new System.Drawing.Size(269, 225);
+            this.txtTacGia.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tác giả";
+            // 
+            // bsSach
+            // 
+            this.bsSach.CurrentChanged += new System.EventHandler(this.bsSach_CurrentChanged);
+            // 
+            // grid2
+            // 
+            this.grid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid2.Location = new System.Drawing.Point(283, 145);
+            this.grid2.Name = "grid2";
+            this.grid2.Size = new System.Drawing.Size(227, 107);
+            this.grid2.TabIndex = 4;
+            // 
             // FormSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 311);
+            this.Controls.Add(this.grid2);
             this.Controls.Add(this.gridSach);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "FormSach";
@@ -163,6 +213,10 @@ namespace QuanLySach
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSach)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,6 +235,11 @@ namespace QuanLySach
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTieuDe;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTacGia;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTacGia;
+        private System.Windows.Forms.BindingSource bsSach;
+        private System.Windows.Forms.DataGridView grid2;
     }
 }
 

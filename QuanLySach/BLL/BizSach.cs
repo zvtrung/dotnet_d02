@@ -48,7 +48,36 @@ namespace QuanLySach.BLL
                 NamXuatBan = 2022
             });
 
+            lst.Add(new Sach()
+            {
+                MaSach = 4,
+                TieuDe = "Sách 4",
+                DanhSachTacGia = "Tác giả 1, Tác giả 2",
+                MaNhaXuatBan = 2,
+                NamXuatBan = 2022
+            });
+
+            lst.Add(new Sach()
+            {
+                MaSach = 5,
+                TieuDe = "Sách 5",
+                DanhSachTacGia = "Tác giả 1",
+                MaNhaXuatBan = 1,
+                NamXuatBan = 2022
+            });
+
             return lst;
+        }
+
+        internal List<Sach> GetSachOfNhaXuatBan(int maNhaXuatBan)
+        {
+            List<Sach> lstAll = this.ReadAll();
+            List<Sach> lstResult = new List<Sach>();
+            for (int i = 0; i < lstAll.Count; i++)
+                if (lstAll[i].MaNhaXuatBan == maNhaXuatBan)
+                    lstResult.Add(lstAll[i]);
+
+            return lstResult;
         }
 
         /// <summary>
