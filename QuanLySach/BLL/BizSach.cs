@@ -34,7 +34,7 @@ namespace QuanLySach.BLL
                 MaSach = 2,
                 TieuDe = "Lập trình Java nâng cao",
                 DanhSachTacGia = "Nguyễn Hoàng Hà, Nguyễn Văn Trung",
-                MaNhaXuatBan = 1,
+                MaNhaXuatBan = 3,
                 NamXuatBan = 2002
             };
             lst.Add(x);
@@ -70,6 +70,11 @@ namespace QuanLySach.BLL
         internal void Insert(Sach x)
         {
             // throw new NotImplementedException();
+        }
+
+        internal void Update(Sach x)
+        {
+            //throw new NotImplementedException();
         }
     }
 }

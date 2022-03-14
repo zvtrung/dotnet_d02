@@ -10,3 +10,4 @@ D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.exe
 D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.pdb
 D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.UI.FormNhaXuatBanNew.resources
 D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.UI.FormSachNew.resources
+D:\T2MProjects\dnet-workspace\Day02\QuanLySach\obj\Debug\QuanLySach.UI.FormSachEdit.resources

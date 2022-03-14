@@ -86,7 +86,18 @@ namespace QuanLySach
 
         private void btnSach_Sua_Click(object sender, EventArgs e)
         {
-            //
+            // Xác định đối tượng đang chọn
+            DataGridViewRow selectedRow = gridSach.CurrentRow;
+            Sach sach = (Sach)selectedRow.DataBoundItem;
+
+            // Tạo form chỉnh sửa cho đối tượng đang chọn
+            FormSachEdit frm = new FormSachEdit(sach);
+
+            if (frm.ShowDialog(this) == DialogResult.OK)
+            {
+                // Cập nhật danh sách cho đối tượng vừa sửa xong
+                //gridSach.
+            }
         }
     }
 }
