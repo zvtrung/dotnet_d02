@@ -42,14 +42,14 @@ namespace HelloADOdotNET
             // gridNhaXuatBan
             // 
             this.gridNhaXuatBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridNhaXuatBan.Location = new System.Drawing.Point(23, 73);
+            this.gridNhaXuatBan.Location = new System.Drawing.Point(12, 73);
             this.gridNhaXuatBan.Name = "gridNhaXuatBan";
-            this.gridNhaXuatBan.Size = new System.Drawing.Size(474, 288);
+            this.gridNhaXuatBan.Size = new System.Drawing.Size(776, 288);
             this.gridNhaXuatBan.TabIndex = 0;
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(23, 27);
+            this.btnSelect.Location = new System.Drawing.Point(12, 27);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(137, 40);
             this.btnSelect.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace HelloADOdotNET
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(184, 27);
+            this.btnDelete.Location = new System.Drawing.Point(155, 27);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(137, 40);
             this.btnDelete.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace HelloADOdotNET
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(327, 27);
+            this.btnUpdate.Location = new System.Drawing.Point(298, 27);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(137, 40);
             this.btnUpdate.TabIndex = 1;

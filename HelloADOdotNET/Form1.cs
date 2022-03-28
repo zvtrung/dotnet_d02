@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using System.Data.SqlClient;
 using QuanLySach.Model;
+using System.Data.Common;
 
 namespace HelloADOdotNET
 {
@@ -28,21 +29,12 @@ namespace HelloADOdotNET
             return x;
         }
 
-        
-
-        void CreateAndAddParam(SqlCommand cmd, string ten, SqlDbType kieuDuLieu, object value)
-        {
-            SqlParameter p = new SqlParameter(ten, kieuDuLieu);
-            p.Value = value;
-            cmd.Parameters.Add(p);
-        }
-
         private void btnSelect_Click(object sender, EventArgs e)
         {
             List<NhaXuatBan> lst = new List<NhaXuatBan>();
 
             #region 1. cnn = tạo kết nối or NULL on error;
-            SqlConnection cnn = null;
+            DbConnection cnn = null;
             try
             {
                 cnn = DbUtils.GetConnection();
@@ -58,15 +50,14 @@ namespace HelloADOdotNET
             cnn.Open();
 
             // a. Tạo command
-            SqlCommand cmd = cnn.CreateCommand();
-            //cmd.CommandText = "SELECT MaNhaXuatBan, TenNhaXuatBan FROM NhaXuatBan";
-            //cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "spGetNhaXuatBanList";
-            cmd.CommandType = CommandType.StoredProcedure;
-
+            DbCommand cmd = cnn.CreateCommand();
+            cmd.CommandText = "SELECT MaNhaXuatBan, TenNhaXuatBan FROM NhaXuatBan";
+            cmd.CommandType = CommandType.Text;
+            //cmd.CommandText = "spGetNhaXuatBanList";
+            //cmd.CommandType = CommandType.StoredProcedure;
 
             // b. Thực thi command
-            SqlDataReader dr = cmd.ExecuteReader();
+            DbDataReader dr = cmd.ExecuteReader();
 
             // c. Khai thác dữ liệu trên command
             while (dr.Read())
@@ -103,9 +94,8 @@ namespace HelloADOdotNET
             }
             #endregion
 
-
             #region 1. cnn = tạo kết nối or NULL on error;
-            SqlConnection cnn = null;
+            DbConnection cnn = null;
             try
             {
                 cnn = DbUtils.GetConnection();
@@ -121,7 +111,7 @@ namespace HelloADOdotNET
             cnn.Open();
 
             // a. Tạo command
-            SqlCommand cmd = cnn.CreateCommand();
+            DbCommand cmd = cnn.CreateCommand();
             //cmd.CommandText = $"DELETE NhaXuatBan WHERE MaNhaXuatBan = {x.MaNhaXuatBan}";
             //cmd.CommandType = CommandType.Text;
 
@@ -130,16 +120,18 @@ namespace HelloADOdotNET
             //cmd.CommandText = sql;
             //cmd.CommandType = CommandType.Text;
             cmd.CommandText = "DELETE NhaXuatBan WHERE TenNhaXuatBan = @TenNhaXuatBan AND MaNhaXuatBan = @MaNXB";
-            SqlParameter pTenNhaXuatBan = new SqlParameter("@TenNhaXuatBan", SqlDbType.NVarChar);
-            pTenNhaXuatBan.Value = x.TenNhaXuatBan;
-            cmd.Parameters.Add(pTenNhaXuatBan);
 
-            //CreateAndAddParam(cmd, "TenNhaXuatBan", SqlDbType.Text, x.TenNhaXuatBan);
+            //SqlParameter pTenNhaXuatBan = new SqlParameter("@TenNhaXuatBan", SqlDbType.NVarChar);
+            //pTenNhaXuatBan.Value = x.TenNhaXuatBan;
+            //cmd.Parameters.Add(pTenNhaXuatBan);
 
-            SqlParameter pMaNhaXuatBan = new SqlParameter("@MaNXB", SqlDbType.Int);
-            pMaNhaXuatBan.Value = x.MaNhaXuatBan;
-            cmd.Parameters.Add(pMaNhaXuatBan);
+            //SqlParameter pMaNhaXuatBan = new SqlParameter("@MaNXB", SqlDbType.Int);
+            //pMaNhaXuatBan.Value = x.MaNhaXuatBan;
+            //cmd.Parameters.Add(pMaNhaXuatBan);
 
+            DbUtils.CreateAndAddParam(cmd, "@TenNhaXuatBan", DbType.String, x.TenNhaXuatBan);
+            DbUtils.CreateAndAddParam(cmd, "@MaNXB", DbType.Int32, x.MaNhaXuatBan);
+            
             // b. Thực thi command dạng ACTION
             int nRowsEffected = cmd.ExecuteNonQuery();
 

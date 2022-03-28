@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace HelloADOdotNET
         private void btnDongY_Click(object sender, EventArgs e)
         {
             #region 1. cnn = tạo kết nối or NULL on error;
-            SqlConnection cnn = null;
+            DbConnection cnn = null;
             try
             {
                 cnn = DbUtils.GetConnection();
@@ -59,17 +60,20 @@ namespace HelloADOdotNET
             cnn.Open();
 
             // a. Tạo command
-            SqlCommand cmd = cnn.CreateCommand();
+            DbCommand cmd = cnn.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "UPDATE NhaXuatBan SET TenNhaXuatBan = @TenNhaXuatBan WHERE MaNhaXuatBan = @MaNXB";
-            
-            SqlParameter pTenNhaXuatBan = new SqlParameter("@TenNhaXuatBan", SqlDbType.NVarChar);
-            pTenNhaXuatBan.Value = txtTenNXB.Text.Trim();
-            cmd.Parameters.Add(pTenNhaXuatBan);
 
-            SqlParameter pMaNhaXuatBan = new SqlParameter("@MaNXB", SqlDbType.Int);
-            pMaNhaXuatBan.Value = _nxb.MaNhaXuatBan;
-            cmd.Parameters.Add(pMaNhaXuatBan);
+            //SqlParameter pTenNhaXuatBan = new SqlParameter("@TenNhaXuatBan", SqlDbType.NVarChar);
+            //pTenNhaXuatBan.Value = txtTenNXB.Text.Trim();
+            //cmd.Parameters.Add(pTenNhaXuatBan);
+
+            //SqlParameter pMaNhaXuatBan = new SqlParameter("@MaNXB", SqlDbType.Int);
+            //pMaNhaXuatBan.Value = _nxb.MaNhaXuatBan;
+            //cmd.Parameters.Add(pMaNhaXuatBan);
+
+            DbUtils.CreateAndAddParam(cmd, "@TenNhaXuatBan", DbType.String, txtTenNXB.Text.Trim());
+            DbUtils.CreateAndAddParam(cmd, "@MaNXB", DbType.Int32, _nxb.MaNhaXuatBan);
 
             // b. Thực thi command dạng ACTION
             int nRowsEffected = cmd.ExecuteNonQuery();

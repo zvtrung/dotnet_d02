@@ -40,7 +40,7 @@ namespace HelloADOdotNET
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 40);
+            this.label1.Location = new System.Drawing.Point(25, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@ namespace HelloADOdotNET
             // 
             // txtMaNXB
             // 
-            this.txtMaNXB.Location = new System.Drawing.Point(88, 37);
+            this.txtMaNXB.Location = new System.Drawing.Point(85, 21);
             this.txtMaNXB.Name = "txtMaNXB";
             this.txtMaNXB.Size = new System.Drawing.Size(124, 20);
             this.txtMaNXB.TabIndex = 1;
@@ -57,7 +57,7 @@ namespace HelloADOdotNET
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 76);
+            this.label2.Location = new System.Drawing.Point(25, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 0;
@@ -65,15 +65,14 @@ namespace HelloADOdotNET
             // 
             // txtTenNXB
             // 
-            this.txtTenNXB.Location = new System.Drawing.Point(88, 73);
+            this.txtTenNXB.Location = new System.Drawing.Point(85, 57);
             this.txtTenNXB.Name = "txtTenNXB";
             this.txtTenNXB.Size = new System.Drawing.Size(300, 20);
             this.txtTenNXB.TabIndex = 1;
-            this.txtTenNXB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnDongY
             // 
-            this.btnDongY.Location = new System.Drawing.Point(223, 133);
+            this.btnDongY.Location = new System.Drawing.Point(220, 110);
             this.btnDongY.Name = "btnDongY";
             this.btnDongY.Size = new System.Drawing.Size(75, 30);
             this.btnDongY.TabIndex = 2;
@@ -83,7 +82,7 @@ namespace HelloADOdotNET
             // 
             // btnBoQua
             // 
-            this.btnBoQua.Location = new System.Drawing.Point(313, 133);
+            this.btnBoQua.Location = new System.Drawing.Point(310, 110);
             this.btnBoQua.Name = "btnBoQua";
             this.btnBoQua.Size = new System.Drawing.Size(75, 30);
             this.btnBoQua.TabIndex = 3;
@@ -95,7 +94,7 @@ namespace HelloADOdotNET
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 186);
+            this.ClientSize = new System.Drawing.Size(417, 170);
             this.Controls.Add(this.btnBoQua);
             this.Controls.Add(this.btnDongY);
             this.Controls.Add(this.txtTenNXB);
