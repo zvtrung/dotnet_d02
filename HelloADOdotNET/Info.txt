@@ -1,0 +1,12 @@
+﻿Thử nghiệm
+1) Kết nối đến csdl
+	loại csdl		: Ms SQL Server
+	máy chủ			: localhost
+	tên đăng nhập	: sa
+	mật khẩu		: 123
+	tên csdl		: BookMan
+2) Thực hiện các thao tác
+	- Lấy danh sách các NhaXuatBan(MaNhaXuatBan, TenNhaXuatBan)
+	- Tạo mới một NhaXuatBan
+	- Cập nhật thông tin 1 NhaXuatBan
+	- Xoá các NhaXuatBan

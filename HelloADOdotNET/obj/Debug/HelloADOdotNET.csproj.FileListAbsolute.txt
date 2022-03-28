@@ -1,0 +1,11 @@
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\bin\Debug\HelloADOdotNET.exe.config
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\bin\Debug\HelloADOdotNET.exe
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\bin\Debug\HelloADOdotNET.pdb
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\obj\Debug\HelloADOdotNET.csproj.AssemblyReference.cache
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\obj\Debug\HelloADOdotNET.Form1.resources
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\obj\Debug\HelloADOdotNET.Properties.Resources.resources
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\obj\Debug\HelloADOdotNET.csproj.GenerateResource.cache
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\obj\Debug\HelloADOdotNET.csproj.CoreCompileInputs.cache
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\obj\Debug\HelloADOdotNET.exe
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\obj\Debug\HelloADOdotNET.pdb
+D:\T2MProjects\dnet-workspace\Day02\HelloADOdotNET\obj\Debug\HelloADOdotNET.FormNhaXuatBan_Sua.resources
