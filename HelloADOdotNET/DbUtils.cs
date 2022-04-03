@@ -15,6 +15,7 @@ namespace HelloADOdotNET
         {
             DbConnection cnn = null;
 
+            #region Sử dụng với MySQL
             string myConnectionString = "server=127.0.0.1;uid=root;pwd=123;database=bookman";
 
             try
@@ -29,7 +30,8 @@ namespace HelloADOdotNET
                 cnn = null;
                 //MessageBox.Show(ex.Message);
                 throw ex;
-            }
+            } 
+            #endregion
 
             //#region Dùng với Ms SQL Server
             //string connectionString = "Server=localhost;Database=BookMan;User Id=sa;Password=123;";
